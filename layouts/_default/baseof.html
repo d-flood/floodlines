@@ -16,6 +16,9 @@
 <body class="dark:bg-slate-950 text-black dark:text-gray-100">
     <header>
         {{ partial "nav.html" . }}
+        {{ if not .IsHome }}
+            {{ partial "breadcrumb.html" . }}
+        {{ end }}
     </header>
     <main>
         {{ block "main" . }}{{ end }}

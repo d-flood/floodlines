@@ -1,0 +1,14 @@
+<nav aria-label="Breadcrumb" class="flex flex-row justify-center">
+    <ol class="flex flex-wrap items-center gap-2">
+        {{ range .Ancestors.Reverse }}
+        <li class="flex items-center gap-2">
+            {{ if not .IsHome }}<span class="text-gray-500">/</span>{{ end }}
+            <a href="{{ .Permalink }}" class="hover:underline">{{ .Title }}</a>
+        </li>
+        {{ end }}
+        <li class="flex items-center gap-2">
+            <span class="text-gray-500">/</span>
+            <span aria-current="page">{{ .Title }}</span>
+        </li>
+    </ol>
+</nav>
