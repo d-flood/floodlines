@@ -7,3 +7,7 @@ block = true
 
 [params]
 description = "The personal blog of David Flood, II"
+
+[taxonomies]
+category = "categories"
+tag = "tags"

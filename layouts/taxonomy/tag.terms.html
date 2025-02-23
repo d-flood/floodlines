@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="prose mx-auto">
+    <h1>All Tags</h1>
+    <ul>
+    {{ range .Data.Terms.Alphabetical }}
+        <li>
+            <a href="{{ .Page.RelPermalink }}">
+                {{ .Page.Title }} ({{ .Count }})
+            </a>
+        </li>
+    {{ end }}
+    </ul>
+</main>
+{{ end }}
