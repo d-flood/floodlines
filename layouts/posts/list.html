@@ -1,0 +1,6 @@
+{{ define "main" }}
+<article>
+    <h1 class="my-8">Blog Posts</h1>
+    {{ partial "post-list.html" (dict "context" . "numberOfPosts" 5) }}
+</article>
+{{ end }}

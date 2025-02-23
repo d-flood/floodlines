@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <title>Flood Lines - {{ .Title }}</title>
+
+    {{ $style := resources.Get "css/output.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ $script := resources.Get "js/nav.js" | minify }}
+    <script src="{{ $script.Permalink }}"></script>
+</head>
+<body class="dark:bg-slate-950 text-gray-100">
+    <header>
+        {{ partial "nav.html" . }}
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+</body>
+</html>

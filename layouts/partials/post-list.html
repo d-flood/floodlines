@@ -1,0 +1,10 @@
+<div class="mx-auto max-w-2xl text-center mt-8">
+  <ul>  
+    {{ range first .numberOfPosts (where site.RegularPages "Section" "posts") }}
+      <li class="mb-2">
+        <a href="{{ .Permalink }}" class="text-emerald-500 text-lg font-bold underline hover:underline-offset-4">{{ .Title }}</a>
+        <span class="text-gray-400"> - {{ .Date.Format "January 2, 2006" }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</div>

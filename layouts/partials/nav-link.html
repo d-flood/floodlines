@@ -1,0 +1,27 @@
+{{- $text := .text -}}
+{{- $url := .url -}}
+{{- $active := .active | default false -}}
+
+<a
+    {{ if $active }}
+        aria-current="page"
+    {{ end }}
+
+    href="{{ $url }}"
+    class="block p-2
+        text-white  
+        border-4
+        rounded-sm
+        border-transparent
+
+        {{ if $active }}
+            md:border-b-emerald-500
+            border-l-emerald-500
+            pointer-events-none
+        {{ else }}
+            hover:md:border-b-emerald-500/50
+            hover:border-l-emerald-500/50
+        {{ end }}
+        ">
+    {{ $text }}
+</a>
