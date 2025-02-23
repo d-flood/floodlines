@@ -1,0 +1,18 @@
+<hr class="my-4">
+<article class="flex flex-col items-center">
+    <div class="mb-4">
+        <div class="my-4">
+            {{ with .Params.categories }}
+                <h2>Categories</h2>
+                {{ partial "categories.html" . }}
+            {{ end }}
+        </div>
+        
+        {{ with .Params.tags }}
+        <div class="my-4">
+            <h2>Tags</h2>
+            {{ partial "tags.html" . }}
+        </div>
+        {{ end }}
+    </div>
+</article>

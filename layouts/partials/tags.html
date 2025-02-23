@@ -1,0 +1,11 @@
+<ul class="flex flex-row flex-wrap justify-center gap-2 my-4">
+    {{ range . }}
+    <li class="flex items-center">
+        <a href="/tags/{{ . | urlize }}" 
+            class="dark:bg-fuchsia-600 dark:hover:bg-fuchsia-800 px-1 pb-1 rounded-lg flex items-center"
+        >
+            {{ . }}
+        </a>
+    </li>
+    {{ end }}
+</ul>

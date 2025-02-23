@@ -3,25 +3,5 @@
     <h1 class="my-2">{{ .Title }}</h1>
     {{ .Content }}
 </article>
-<article>
-    <div class="mb-4">
-        {{ with .Params.categories }}
-        <div class="mb-2">
-            <span class="font-semibold">Categories:</span>
-            {{ range . }}
-            <a href="/categories/{{ . | urlize }}" class="ml-2 text-primary hover:underline">{{ . }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
-        
-        {{ with .Params.tags }}
-        <div>
-            <span class="font-semibold">Tags:</span>
-            {{ range . }}
-            <a href="/tags/{{ . | urlize }}" class="ml-2 text-primary hover:underline">{{ . }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
-</article>
+{{ partial "tags-and-categories.html" . }}
 {{ end }}

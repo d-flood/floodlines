@@ -1,0 +1,9 @@
+<main class="mx-auto max-w-2xl text-center mt-8">
+    <h1>{{ if eq .Data.Plural "categories" }}Posts in category "{{ .Title }}"{{ else }}Posts tagged "{{ .Title }}"{{ end }}</h1>
+    <hr class="my-4">
+    <ul>
+    {{ range .Pages }}
+        {{ partial "post-li.html" . }}
+    {{ end }}
+    </ul>
+</main>
