@@ -15,20 +15,12 @@
         </button>
 
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul
-                class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                {{ range .Site.Menus.main }}
                 <li>
-                    {{ partial "nav-link" (dict "text" "Home" "url" "/" "active" (eq .RelPermalink "/")) }}
+                    {{ partial "nav-link" (dict "text" .Name "url" .URL "active" ($.RelPermalink | eq .URL)) }}
                 </li>
-                <li>
-                    {{ partial "nav-link" (dict "text" "Blog" "url" "/posts" "active" (or (strings.Contains .RelPermalink "/posts") (strings.Contains .RelPermalink "/tags") (strings.Contains .RelPermalink "/categories"))) }}
-                </li>
-                <li>
-                    {{ partial "nav-link" (dict "text" "Contact" "url" "/contact" "active" (eq .RelPermalink "/contact")) }}
-                </li>
-                <li>
-                    {{ partial "nav-link" (dict "text" "RSS" "url" "/index.xml" "active" (eq .RelPermalink "/index.xml")) }}
-                </li>
+                {{ end }}
                 <li>
                     {{ partial "theme-button.html" }}
                 </li>

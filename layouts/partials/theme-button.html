@@ -12,8 +12,28 @@
 </button>
 
 <script>
+    setTheme();
+
+    function setTheme() {
+        const theme = localStorage.getItem('theme');
+        console.log('theme', theme);
+        if (theme === null) {
+            // Check system preference
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        } else if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }
+    
     function toggleTheme() {
         const html = document.documentElement;
         html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
     }
 </script>
