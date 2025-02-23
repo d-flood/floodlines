@@ -13,7 +13,7 @@
     {{ $script := resources.Get "js/nav.js" | minify }}
     <script src="{{ $script.Permalink }}"></script>
 </head>
-<body class="dark:bg-slate-950 text-black dark:text-gray-100">
+<body class="dark:bg-slate-950 text-black dark:text-gray-100 min-h-screen flex flex-col">
     <header>
         {{ partial "nav.html" . }}
         {{ if not .IsHome }}
@@ -23,5 +23,6 @@
     <main>
         {{ block "main" . }}{{ end }}
     </main>
+    {{ partial "footer.html" . }}
 </body>
 </html>
