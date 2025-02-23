@@ -2,9 +2,9 @@
     {{ range .Data.Terms.Alphabetical }}
         <li class="flex items-center">
             <a href="{{ .Page.RelPermalink }}"
-                class='px-1 pb-1 rounded-lg flex items-center
-                    {{ if eq .Page.Type "tags" }} dark:bg-fuchsia-600 dark:hover:bg-fuchsia-800{{ end }}
-                    {{ if eq .Page.Type "categories" }} dark:bg-emerald-500 dark:hover:bg-emerald-700{{ end }}'
+                class='px-1 pb-1 rounded-lg flex items-center text-white
+                    {{ if eq .Page.Type "tags" }} bg-fuchsia-600 hover:bg-fuchsia-800{{ end }}
+                    {{ if eq .Page.Type "categories" }} bg-emerald-500 hover:bg-emerald-700{{ end }}'
                 >
                 {{ .Page.Title }} ({{ .Count }})
             </a>

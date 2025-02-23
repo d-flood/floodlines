@@ -1,27 +1,11 @@
 <ul class="flex flex-row flex-wrap justify-center gap-2 my-4">
     {{ range . }}
     <li class="flex items-center">
-        {{ if reflect.IsMap . }}
-            {{ if .Term }}
-            <a href="{{ .Page.RelPermalink }}" 
-                class="dark:bg-emerald-500 dark:hover:bg-emerald-700 px-1 pb-1 rounded-lg flex items-center"
-            >
-                {{ .Page.Title }} ({{ .Count }})
-            </a>
-            {{ else }}
-            <a href="/categories/{{ .Name | urlize }}" 
-                class="dark:bg-emerald-500 dark:hover:bg-emerald-700 px-1 pb-1 rounded-lg flex items-center"
-            >
-                {{ .Name }} ({{ len .WeightedPages }})
-            </a>
-            {{ end }}
-        {{ else }}
         <a href="/categories/{{ . | urlize }}" 
-            class="dark:bg-emerald-500 dark:hover:bg-emerald-700 px-1 pb-1 rounded-lg flex items-center"
+            class="text-white bg-emerald-500 hover:bg-emerald-700 px-1 pb-1 rounded-lg flex items-center"
         >
             {{ . }}
         </a>
-        {{ end }}
     </li>
     {{ end }}
 </ul>
