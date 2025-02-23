@@ -9,18 +9,18 @@
 
     href="{{ $url }}"
     class="block p-2
-        text-white  
+        text-black dark:text-white
         border-4
         rounded-sm
         border-transparent
 
         {{ if $active }}
-            md:border-b-emerald-500
-            border-l-emerald-500
+            md:border-b-fuchsia-500 dark:md:border-b-emerald-500
+            border-l-fuchsia-500 dark:border-l-emerald-500
             pointer-events-none
         {{ else }}
-            hover:md:border-b-emerald-500/50
-            hover:border-l-emerald-500/50
+            hover:md:border-b-fuchsia-500/50 dark:hover:md:border-b-emerald-500/50
+            hover:border-l-fuchsia-500/50 dark:hover:border-l-emerald-500/50
         {{ end }}
         ">
     {{ $text }}

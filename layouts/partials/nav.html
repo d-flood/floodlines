@@ -1,4 +1,4 @@
-<nav class="bg-slate-950 border-b border-b-fuchsia-500">
+<nav class="bg-emerald-200 dark:bg-slate-950 text-black dark:text-white border-b-2 border-b-fuchsia-500">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/favicon.ico" class="h-8" alt="" />
@@ -13,6 +13,7 @@
                     d="M1 1h15M1 7h15M1 13h15" />
             </svg>
         </button>
+
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul
                 class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
@@ -20,13 +21,16 @@
                     {{ partial "nav-link" (dict "text" "Home" "url" "/" "active" (eq .RelPermalink "/")) }}
                 </li>
                 <li>
-                    {{ partial "nav-link" (dict "text" "Blog" "url" "/posts" "active" (strings.Contains .RelPermalink "/posts")) }}
+                    {{ partial "nav-link" (dict "text" "Blog" "url" "/posts" "active" (or (strings.Contains .RelPermalink "/posts") (strings.Contains .RelPermalink "/tags") (strings.Contains .RelPermalink "/categories"))) }}
                 </li>
                 <li>
                     {{ partial "nav-link" (dict "text" "Contact" "url" "/contact" "active" (eq .RelPermalink "/contact")) }}
                 </li>
                 <li>
                     {{ partial "nav-link" (dict "text" "RSS" "url" "/index.xml" "active" (eq .RelPermalink "/index.xml")) }}
+                </li>
+                <li>
+                    {{ partial "theme-button.html" }}
                 </li>
             </ul>
         </div>
