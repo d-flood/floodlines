@@ -1,9 +1,13 @@
-<ul>
+<ul class="flex flex-row flex-wrap justify-center gap-2 my-4">
     {{ range .Data.Terms.Alphabetical }}
-        <li>
-            <a href="{{ .Page.RelPermalink }}">
+        <li class="flex items-center">
+            <a href="{{ .Page.RelPermalink }}"
+                class='px-1 pb-1 rounded-lg flex items-center
+                    {{ if eq .Page.Type "tags" }} dark:bg-fuchsia-600 dark:hover:bg-fuchsia-800{{ end }}
+                    {{ if eq .Page.Type "categories" }} dark:bg-emerald-500 dark:hover:bg-emerald-700{{ end }}'
+                >
                 {{ .Page.Title }} ({{ .Count }})
             </a>
         </li>
     {{ end }}
-    </ul>
+</ul>
