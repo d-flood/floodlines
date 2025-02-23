@@ -3,7 +3,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold text-center;
+  @apply font-bold text-center my-2;
+}
+
+.prose p {
+  @apply my-2;
 }
 
 h1 {

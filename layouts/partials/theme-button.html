@@ -16,7 +16,6 @@
 
     function setTheme() {
         const theme = localStorage.getItem('theme');
-        console.log('theme', theme);
         if (theme === null) {
             // Check system preference
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
