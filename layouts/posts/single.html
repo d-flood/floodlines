@@ -1,7 +1,9 @@
 {{ define "main" }}
-<article class="prose">
-    <h1 class="my-2">{{ .Title }}</h1>
-    {{ .Content }}
-</article>
-{{ partial "tags-and-categories.html" . }}
+<div class="flex flex-col lg:flex-row">
+    <article class="prose px-8">
+        <h1 class="my-2">{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+    {{ partial "tags-and-categories.html" . }}
+</div>
 {{ end }}

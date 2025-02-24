@@ -4,8 +4,8 @@ draft = false
 title = 'Home'
 +++
 
-# Flood Lines
+<!-- # Flood Lines
 _Personal Blog of David Flood, II_
 {.text-center}
 
-This is my spicy blog.
+This is my spicy blog. -->

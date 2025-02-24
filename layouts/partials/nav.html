@@ -18,7 +18,9 @@
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 {{ range .Site.Menus.main }}
                 <li>
-                    {{ partial "nav-link" (dict "text" .Name "url" .URL "active" ($.RelPermalink | eq .URL)) }}
+                    {{- $isHome := eq .URL "/" -}}
+                    {{- $isActive := or (and (not $isHome) (hasPrefix $.RelPermalink .URL)) (and $isHome (eq $.RelPermalink .URL)) -}}
+                    {{ partial "nav-link" (dict "text" .Name "url" .URL "active" $isActive) }}
                 </li>
                 {{ end }}
                 <li>

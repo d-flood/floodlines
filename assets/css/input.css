@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose p {
-  @apply my-2;
+  @apply my-4;
 }
 
 h1 {
@@ -35,5 +35,9 @@ h6 {
 }
 
 article.prose {
-    @apply mx-auto max-w-2xl px-1 md:px-0;
+    @apply mx-auto max-w-2xl px-2 md:px-0;
 }
+
+/* .prose p::first-letter {
+    @apply text-2xl font-semibold;
+} */
