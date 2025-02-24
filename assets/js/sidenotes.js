@@ -51,7 +51,10 @@ function makeSideNotes() {
     const footnotes = document.querySelectorAll("[role=doc-endnotes] li");
     const sidenoteContainer = document.getElementById("sidenotes");
     
-    footnotes.forEach(note => sidenoteContainer.appendChild(note));
+    footnotes.forEach(note => {
+        const clonedNote = note.cloneNode(true);
+        sidenoteContainer.appendChild(clonedNote);
+    });
 
     window.addEventListener('load', positionNotes);
     window.addEventListener('resize', positionNotes);

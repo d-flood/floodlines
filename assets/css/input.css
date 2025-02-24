@@ -66,6 +66,10 @@ article.prose {
   @apply list-[square] list-inside ml-8;
 }
 
+.prose [role="doc-endnotes"] {
+  @apply xl:hidden;
+}
+
 
 /* .prose p::first-letter {
     @apply text-2xl font-semibold;

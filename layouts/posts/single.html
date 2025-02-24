@@ -3,12 +3,12 @@
 <div class="mt-8 px-2 flex flex-col items-center xl:flex-row xl:justify-center xl:items-stretch xl:gap-8">
     <section class="flex-grow max-w-2xl w-full">
         {{ if and .TableOfContents (eq .Params.toc true) }}
-        <div class="mb-2 p-2 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:border-emerald-500 dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
+        <div class="mb-2 p-2 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
             <h2 class="text-xl font-bold mb-2">Table of Contents</h2>
             {{ .TableOfContents }}
         </div>
         {{ end }}
-        <div class="mb-8 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:border-emerald-500 dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
+        <div class="mb-8 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
             {{ partial "tags-and-categories.html" . }}
         </div>
     </section>
