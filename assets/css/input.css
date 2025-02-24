@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6 {
   @apply my-4;
 }
 
+.prose a {
+  @apply text-fuchsia-600 dark:text-emerald-300 underline hover:underline-offset-2;
+}
+
 h1 {
   @apply text-5xl;
 }
@@ -35,8 +39,25 @@ h6 {
 }
 
 article.prose {
-    @apply max-w-2xl px-2 md:px-0;
+  @apply max-w-2xl px-2 md:px-0;
 }
+
+#TableOfContents a {
+  @apply underline hover:text-black dark:hover:text-gray-100 hover:underline-offset-2;
+}
+
+#TableOfContents ul {
+  @apply list-decimal list-inside font-bold text-gray-700 dark:text-gray-300;
+}
+
+#TableOfContents ul ul {
+  @apply list-[circle] list-inside ml-6 font-semibold;
+}
+
+#TableOfContents ul ul ul {
+  @apply list-[square] list-inside ml-8;
+}
+
 
 /* .prose p::first-letter {
     @apply text-2xl font-semibold;

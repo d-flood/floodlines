@@ -2,6 +2,12 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
+[markup]
+[markup.tableOfContents]
+endLevel = 4
+startLevel = 2
+ordered = false
+
 [markup.goldmark.parser.attribute]
 block = true
 

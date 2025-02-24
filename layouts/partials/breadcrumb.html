@@ -1,14 +1,14 @@
 <nav aria-label="Breadcrumb" class="flex flex-row justify-center">
-    <ol class="flex flex-wrap items-center gap-2">
+    <ol class="flex flex-wrap items-center gap-2 pb-0.5 px-1 border-b-2 border-fuchsia-500">
         {{ range .Ancestors.Reverse }}
         <li class="flex items-center gap-2">
             {{ if not .IsHome }}<span class="text-gray-500">/</span>{{ end }}
-            <a href="{{ .Permalink }}" class="hover:underline">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="font-semibold underline text-gray-700 dark:text-gray-300 hover:text-black hover:dark:text-white hover:underline-offset-2">{{ .Title }}</a>
         </li>
         {{ end }}
         <li class="flex items-center gap-2">
             <span class="text-gray-500">/</span>
-            <span aria-current="page">{{ .Title }}</span>
+            <span aria-current="page" class="font-semibold">{{ .Title }}</span>
         </li>
     </ol>
 </nav>
