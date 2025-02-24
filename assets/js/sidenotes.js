@@ -46,7 +46,12 @@ function positionNotes() {
 
 function makeSideNotes() {
     const footnoteContainer = document.getElementsByClassName("footnotes")[0];
-    if (!footnoteContainer) return;
+    const sidenotesSection = document.getElementById("sidenotes-section");
+    
+    if (!footnoteContainer) {
+        sidenotesSection.classList.remove("xl:block");
+        return;
+    }
 
     const footnotes = document.querySelectorAll("[role=doc-endnotes] li");
     const sidenoteContainer = document.getElementById("sidenotes");
