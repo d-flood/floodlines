@@ -1,18 +1,13 @@
-<hr class="my-4 block lg:hidden" />
 <article class="flex flex-col items-center">
-    <div class="mb-4">
-        <div class="my-4">
-            {{ with .Params.categories }}
-                <h2>Categories</h2>
-                {{ partial "categories.html" . }}
-            {{ end }}
-        </div>
+    <div>
+        {{ with .Params.categories }}
+            <h2 class="text-xl">Categories</h2>
+            {{ partial "categories.html" . }}
+        {{ end }}
         
         {{ with .Params.tags }}
-        <div class="my-4">
-            <h2>Tags</h2>
+            <h2 class="text-xl">Tags</h2>
             {{ partial "tags.html" . }}
-        </div>
         {{ end }}
     </div>
 </article>

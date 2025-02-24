@@ -1,17 +1,23 @@
 {{ define "main" }}
-<h1 class="">{{ .Title }}</h1>
-<div class="mt-8 flex flex-col items-center xl:flex-row xl:justify-center xl:items-start xl:gap-2">
-    {{ if and .TableOfContents (eq .Params.toc true) }}
-    <div class="mb-8 p-2 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:border-emerald-500 dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
-        <h2 class="text-xl font-bold mb-2">Table of Contents</h2>
-        {{ .TableOfContents }}
-    </div>
-    {{ end }}
-    <article class="prose px-8">
+<h1 class="text-5xl">{{ .Title }}</h1>
+<div class="mt-8 px-2 flex flex-col items-center xl:flex-row xl:justify-center xl:items-stretch xl:gap-8">
+    <section class="flex-grow max-w-2xl w-full">
+        {{ if and .TableOfContents (eq .Params.toc true) }}
+        <div class="mb-2 p-2 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:border-emerald-500 dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
+            <h2 class="text-xl font-bold mb-2">Table of Contents</h2>
+            {{ .TableOfContents }}
+        </div>
+        {{ end }}
+        <div class="mb-8 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:border-emerald-500 dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
+            {{ partial "tags-and-categories.html" . }}
+        </div>
+    </section>
+    <article class="prose px-8 flex-grow-0 max-w-3xl">
         {{ .Content }}
     </article>
-    <div class="mb-8 p-2 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:border-emerald-500 dark:text-gray-300 rounded xl:sticky xl:top-4 xl:max-h-screen xl:overflow-y-auto min-w-80">
-        {{ partial "tags-and-categories.html" . }}
-    </div>
+    <section class="prose px-1 min-w-72 max-w-96 flex-grow bg-gray-50 dark:bg-slate-900 rounded hidden xl:block">
+        <h2 class="text-xl">Notes</h2>
+        <ol id="sidenotes" style="position: relative"></ol>
+    </section>
 </div>
 {{ end }}

@@ -1,0 +1,12 @@
+{{ $nav := resources.Get "js/nav.js" }}
+{{ $sidenotes := resources.Get "js/sidenotes.js" }}
+{{ $js := slice $nav $sidenotes }}
+
+{{ if hugo.IsProduction }}
+    {{ $js = $js | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ else }}
+    {{ range $js }}
+        <script src="{{ .RelPermalink }}" defer></script>
+    {{ end }}
+{{ end }}

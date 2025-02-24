@@ -14,27 +14,35 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-fuchsia-600 dark:text-emerald-300 underline hover:underline-offset-2;
 }
 
-h1 {
+.prose ol {
+  @apply list-decimal;
+}
+
+/* .prose ol>li>p {
+  @apply inline;
+} */
+
+.prose h1 {
   @apply text-5xl;
 }
 
-h2 {
+.prose h2 {
   @apply text-4xl;
 }
 
-h3 {
+.prose h3 {
   @apply text-3xl;
 }
 
-h4 {
+.prose h4 {
   @apply text-2xl;
 }
 
-h5 {
+.prose h5 {
   @apply text-xl;
 }
 
-h6 {
+.prose h6 {
   @apply text-lg;
 }
 
