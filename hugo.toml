@@ -8,6 +8,9 @@ endLevel = 4
 startLevel = 2
 ordered = false
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [markup.goldmark.parser.attribute]
 block = true
 
