@@ -55,7 +55,7 @@ jobs:
         run: npm run tailwind-build
 
       - name: Publish to GitHub Pages
-        run: hugo --minify
+        run: hugo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
