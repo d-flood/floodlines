@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose a {
-  @apply text-fuchsia-600 dark:text-emerald-300 underline hover:underline-offset-2;
+  @apply text-violet-600 dark:text-emerald-300 underline hover:underline-offset-2;
 }
 
 .prose ol {
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose h2 {
-  @apply text-4xl;
+  @apply text-4xl border-b-2;
 }
 
 .prose h3 {
@@ -35,19 +35,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose h4 {
-  @apply text-2xl;
-}
-
-.prose h5 {
   @apply text-xl;
 }
 
-.prose h6 {
+.prose h5 {
   @apply text-lg;
+}
+
+.prose h6 {
+  @apply text-base;
 }
 
 article.prose {
   @apply max-w-2xl px-2 md:px-0;
+}
+
+.prose blockquote {
+  @apply border-l-4 bg-gray-200 dark:bg-slate-800 border-violet-500 dark:border-emerald-500 pl-4 my-4 ml-8;
+}
+
+.prose em {
+  @apply italic text-amber-700 dark:text-amber-300;
+}
+
+.prose strong {
+  @apply font-bold text-rose-700 dark:text-rose-300;
+}
+
+.prose ul {
+  @apply list-disc list-inside;
+}
+
+.prose aside {
+  @apply bg-gray-100 dark:bg-gray-800 p-4 my-4 rounded;
+}
+
+.prose aside>h2 {
+  @apply text-xl font-bold;
 }
 
 #TableOfContents a {
