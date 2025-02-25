@@ -1,13 +1,26 @@
-<article class="flex flex-col items-center">
+<article class="flex flex-col items-start">
     <div>
+        <header class="text-center my-4">
+            <p class="font-bold">
+                By <span rel="author">{{ .Params.author }}</span>
+            </p>
+            <time datetime="{{ .Date.Format "2006-01-02" }}" class="font-bold block">
+                {{ dateFormat "January 2, 2006" .Date }}
+            </time>
+        </header>
+        <hr>
         {{ with .Params.categories }}
-            <h2 class="text-xl">Categories</h2>
-            {{ partial "categories.html" . }}
+            <section class="grid grid-cols-2 gap-2 items-center">
+                <h2 class="text-lg">Categories:</h2>
+                {{ partial "categories.html" . }}
+            </section>
         {{ end }}
-        
+        <hr>
         {{ with .Params.tags }}
-            <h2 class="text-xl">Tags</h2>
-            {{ partial "tags.html" . }}
+            <section class="grid grid-cols-2 gap-2 items-center">
+                <h2 class="text-lg">Tags:</h2>
+                {{ partial "tags.html" . }}
+            </section>
         {{ end }}
     </div>
 </article>
