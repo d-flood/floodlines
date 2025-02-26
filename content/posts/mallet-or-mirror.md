@@ -8,6 +8,7 @@ categories = ["Ecclesiology", "Bad Ideas about the Church"]
 tags = ["church and state", "hauerwas", "politics"]
 +++
 
+## Introduction
 Living in America means constantly navigating the relationship between Christianity and politics, between church[^1] and society. Whether it's prayer in schools, religious liberty laws, or debates about "Christian nationalism," we're surrounded by competing visions of how the church should relate to the world. In this post, I want to explore two fundamentally opposed ways of thinking about this relationship: seeing the church either as a "mallet" for reshaping society or as a "mirror" that helps the world understand itself as world. While the former view dominates much of contemporary American Christianity, I'll argue that it fundamentally misunderstands both the church's identity and its mission.
 
 ## Church as Mallet[^2]
@@ -64,9 +65,9 @@ In the end, the church best serves the world not by trying to control it, but by
 
 [^5]: Jesus promised the world would hate his disciples. The assumption throughout the New Testament is that the church would be a marginal community. If that community now has incredible political power, what does that mean? Does it mean the powerful and influential community that _calls_ itself "church" is actually not, or might it imply that much of the New Testament is simply not relevant for dominant culture Americans because we are so removed from the New Testament's context? A context in which Christians were marginal and persecuted—a far cry from the situation in the U.S. where the Evangelical vote won its desired presidential candidate in addition to control of all other branches of government. There have been many dark periods in history when a people calling themselves Christian had the power to persecute _others_, and did so in evil and violence. We certainly have the ability to do so again.
 
-[^6]: **insert all Hauerwas sources here**
+[^6]: Stanley Hauerwas: "A Christian Critique of Christian America" in _Christian Existence Today: Essays on Church, World, and Living in Between_. (1988). Wipf and Stock. | "The Church and Liberal Democracy: The Moral Limits of a Secular Polity" in _A Community of Character: Toward a Constructive Christian Social Ethic_. (1991). University of Notre Dame Press. | _The Peaceable Kingdom: A Primer in Christian Ethics_. (1991). University of Notre Dame Press.
 
-[^7]: p. 100, _The Peaceable Kingdom : A Primer in Christian Ethics_. (1991). University of Notre Dame Press.
+[^7]: p. 100, _The Peaceable Kingdom_
 
 [^8]: 101, _The Peaceable Kingdom_
 
