@@ -13,9 +13,9 @@
 <body class="dark:bg-slate-950 text-black dark:text-gray-100 min-h-screen flex flex-col">
     <header>
         {{ partial "nav.html" . }}
-        {{ if not .IsHome }}
+        {{/*  {{ if not .IsHome }}
             {{ partial "breadcrumb.html" . }}
-        {{ end }}
+        {{ end }}  */}}
     </header>
     <main>
         {{ block "main" . }}{{ end }}
