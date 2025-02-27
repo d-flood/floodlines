@@ -1,7 +1,7 @@
 {{ define "main" }}
-    <article class="container mx-auto my-8 prose">
-        {{ .Content }}
-    </article>
-    <h1 class="mt-8">Recent Blog Posts</h1>
-    {{ partial "post-list.html" (dict "context" . "numberOfPosts" 5) }}
+<article class="container mx-auto my-8 prose">
+    {{ .Content }}
+</article>
+<h1 class="mt-8 text-2xl">Recent Blog Posts</h1>
+{{ partial "post-list.html" (dict "context" . "numberOfPosts" 3) }}
 {{ end }}
