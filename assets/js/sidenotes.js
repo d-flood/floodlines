@@ -45,6 +45,9 @@ function positionNotes() {
 }
 
 function makeSideNotes() {
+    const sidenoteContainer = document.getElementById("sidenotes");
+    if (!sidenoteContainer) return;
+
     const footnoteContainer = document.getElementsByClassName("footnotes")[0];
     const sidenotesSection = document.getElementById("sidenotes-section");
     
@@ -54,12 +57,24 @@ function makeSideNotes() {
     }
 
     const footnotes = document.querySelectorAll("[role=doc-endnotes] li");
-    const sidenoteContainer = document.getElementById("sidenotes");
     
     footnotes.forEach(note => {
         const clonedNote = note.cloneNode(true);
         sidenoteContainer.appendChild(clonedNote);
     });
+
+    // Create observer for width changes
+    const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+            if (entry.contentRect.width !== entry.target.previousWidth) {
+                entry.target.previousWidth = entry.contentRect.width;
+                positionNotes();
+            }
+        }
+    });
+
+    // Start observing sidenotes container
+    resizeObserver.observe(sidenoteContainer);
 
     window.addEventListener('load', positionNotes);
     window.addEventListener('resize', positionNotes);
@@ -67,4 +82,8 @@ function makeSideNotes() {
     requestAnimationFrame(positionNotes);
 }
 
-document.addEventListener("DOMContentLoaded", makeSideNotes);
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById("sidenotes")) {
+        makeSideNotes();
+    }
+});
