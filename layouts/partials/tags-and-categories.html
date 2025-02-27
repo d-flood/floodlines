@@ -2,15 +2,15 @@
     <details class="w-full">
         <summary class="font-bold cursor-pointer w-full hover:text-gray-700 text-center hover:dark:text-gray-400">Categories and Tags</summary>
         {{ with .Params.categories }}
-            <section class="grid grid-cols-2 gap-2 items-center">
-                <h2 class="text-lg">Categories:</h2>
+            <section class="">
+                <h2 class="text-lg">Categories</h2>
                 {{ partial "categories.html" . }}
             </section>
         {{ end }}
         <hr>
         {{ with .Params.tags }}
-            <section class="grid grid-cols-2 gap-2 items-center">
-                <h2 class="text-lg">Tags:</h2>
+            <section class="">
+                <h2 class="text-lg">Tags</h2>
                 {{ partial "tags.html" . }}
             </section>
         {{ end }}
