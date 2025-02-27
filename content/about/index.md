@@ -1,11 +1,12 @@
 +++
 date = '2025-02-25T17:21:06-05:00'
-autthor = "David Flood, II"
+author = "David Flood, II"
 draft = false
 title = 'About this Blog'
 toc = false
 categories = []
 tags = []
+layout = "about"
 +++
 
 This is my informal blog. I have other outlets for professional and academic writing. But rather than "thinking out loud," this is a space for reflections on research or topics which which I have engaged critically.

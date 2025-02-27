@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="mt-4 flex gap-4 flex-col items-center lg:flex-row lg:justify-center">
+    <article class="prose">
+        <div>
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+        {{ $image := .Resources.GetMatch "headshot.jpg" }}
+    </article>
+    {{ with $image := $image.Process "resize 400x400" }}
+        <figure>
+            <img src="{{ .RelPermalink }}" width="{{ sub .Width 100 }}" height="{{ sub .Height 100 }}"
+                class="rounded-full" alt="Headshot of a man in a graduation gown outside." loading="lazy" decoding="async"
+            >
+            <figcaption class="text-center">David Flood, II</figcaption>
+        </figure>
+    {{ end }}
+</div>
+{{ end }}
