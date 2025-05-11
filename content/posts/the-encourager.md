@@ -32,7 +32,7 @@ I love you, Mom.
 ## *The Encourager*, a song for my mother
 
 <video width="100%" controls>
-  <source src="/The Encourager.mp4" type="video/mp4">
+  <source src="/The-Encourager.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
