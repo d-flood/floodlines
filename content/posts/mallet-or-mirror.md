@@ -1,7 +1,7 @@
 +++
 date = '2025-02-25T16:23:43-05:00'
 author = "David Flood, II"
-draft = false
+draft = true
 title = 'Is the Church a Mallet or a Mirror?'
 toc = true
 categories = ["Ecclesiology", "Bad Ideas about the Church"]

@@ -4,8 +4,6 @@ author = "David Flood, II"
 draft = false
 title = 'About this Blog'
 toc = false
-categories = []
-tags = []
 layout = "about"
 +++
 

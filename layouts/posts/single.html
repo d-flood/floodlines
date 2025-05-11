@@ -1,19 +1,23 @@
 {{ define "main" }}
 <h1 class="text-5xl">{{ .Title }}</h1>
 <div class="mt-8 px-2 flex flex-col items-center xl:flex-row xl:justify-center xl:items-stretch xl:gap-8">
-    <section class="flex-grow max-w-2xl xl:max-w-fit w-full xl:sticky xl:top-4 h-fit min-w-80">
-        {{ if and .TableOfContents (eq .Params.toc true) }}
-        <div class="bg-emerald-50 dark:bg-slate-900 border border-transparent dark:text-gray-300 rounded">
-            <details>
-                <summary class="font-bold cursor-pointer w-full hover:text-gray-700 text-center hover:dark:text-gray-400">Table of Contents</summary>
-                {{ .TableOfContents }}
-            </details>
-        </div>
-        {{ end }}
-        <div class="my-4 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:text-gray-300 rounded xl:max-w-lg">
-            {{ partial "tags-and-categories.html" . }}
-        </div>
-    </section>
+    {{ if or (or .Params.tags .Params.categories) .Params.toc }}
+        <section class="flex-grow max-w-2xl xl:max-w-fit w-full xl:sticky xl:top-4 h-fit min-w-80">
+            {{ if and .TableOfContents (eq .Params.toc true) }}
+            <div class="bg-emerald-50 dark:bg-slate-900 border border-transparent dark:text-gray-300 rounded">
+                <details>
+                    <summary class="font-bold cursor-pointer w-full hover:text-gray-700 text-center hover:dark:text-gray-400">Table of Contents</summary>
+                    {{ .TableOfContents }}
+                </details>
+            </div>
+            {{ end }}
+            {{ if .Params.tags }}
+                <div class="my-4 bg-emerald-50 dark:bg-slate-900 border border-transparent dark:text-gray-300 rounded xl:max-w-lg">
+                    {{ partial "tags-and-categories.html" . }}
+                </div>
+            {{ end }}
+        </section>
+    {{ end }}
     <article class="prose px-8 flex-grow-0 max-w-3xl">
         <header class="text-center my-4">
             <p class="font-bold">
