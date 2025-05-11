@@ -8,7 +8,7 @@ categories = []
 tags = []
 +++
 
-## My mother, "The Encourager"
+## Happy Mother's Day, Mom!
 
 On this Mother's Day, in May of 2025, I am glad I have the opportunity to celebrate my mom.
 
@@ -29,7 +29,7 @@ You are an **encourager**. Which is why I have written a song for you on this Mo
 
 I love you, Mom.
 
-### *The Encourager*, a song for my mother
+## *The Encourager*, a song for my mother
 
 <video width="100%" controls>
   <source src="/The Encourager.mp4" type="video/mp4">
